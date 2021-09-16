@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Fraunces:ital,wght@0,300;0,400;0,500;0,700;1,200;1,300&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+</head>
+
+<body>
+
+  <header>
+
+    <nav class="top-nav">
+
+      <div class="logo">
+        <img src="/images/logo.svg" alt="sunnyside logo">
+      </div>
+
+      <!-- <div class="hamburger-icon" href="" onclick="toggle()"> -->
+      <div class="hamburger-icon">
+        <img src="/images/icon-hamburger.svg" alt="navigation menu icon">
+      </div>
+
+      <div id="hamburger-menu">
+        <ul id="hamburger-links">
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="" id="hamburger-cta">Contact</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+    <div class="hero-container">
+      <h1>We are creatives</h1>
+      <img class="header-arrow" src="/images/icon-arrow-down.svg">
+    </div>
+
+  </header>
+  <main>
+
+    <div class="features-container">
+
+          <div class="feature-copy-container transform">
+            <h2 class="feature-header">Transform your brand</h2>
+            <p class="feature-copy">We are a full-service creative agency specializing in helping brands grow fast.
+              Engage your clients through compelling visuals that do most of the marketing for you.</p>
+            <p class="feature-cta yellow-cta"><a href="#">Learn more</a></p>
+          </div>
+          <div class="feature-image-transform egg">
+          </div>
+
+          <div class="feature-copy-container standout">
+            <h2 class="feature-header">Stand out to the right audience</h2>
+            <p class="feature-copy">Using a collaborative formula of designers, researchers, photographers,
+              videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
+            <p class="feature-cta pink-cta"><a href="#">Learn more</a></p>
+          </div>
+          <div class="feature-image-standout glass">
+          </div>
+
+
+        <div class="feature-additional cherry">
+          <h2>Graphic design</h3>
+            <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures
+              potential clients’ attention.</p>
+        </div>
+        <div class="feature-additional orange">
+          <h2>Photography</h3>
+            <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business
+              image.</p>
+        </div>
+      </div>
+
+
+    <div class="testimonials-container">
+      <div class="testimonals-header">
+        <h3>Client testimonials<h3>
+      </div>
+
+      <div class="testimonials">
+
+        <div class="testimonial">
+          <img src="/images/image-emily.jpg" alt="Emily">
+          <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were
+            always hit.</p>
+          <h4 class="testimonial-name">Emily R.</h4>
+          <p class="testimonial-job">Marketing Director</p>
+        </div>
+
+        <div class="testimonial">
+          <img src="/images/image-thomas.jpg" alt="Thomas">
+          <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
+            enjoyable experience.</p>
+          <h4 class="testimonial-name">Thomas S.</h4>
+          <p class="testimonial-job">Chief Operating Officer</p>
+        </div>
+
+        <div class="testimonial">
+          <img src="/images/image-jennie.jpg" alt="Jennie">
+          <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+          </p>
+          <h4 class="testimonial-name">Jennie F.</h4>
+          <p class="testimonial-job">Business Owner</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="image-carousel">
+      <img src="/images/desktop/image-gallery-milkbottles.jpg"  alt="A row of milkbottles">      
+      <img src="/images/desktop/image-gallery-orange.jpg"  alt="A slice of orange on a plate">
+      <img src="/images/desktop/image-gallery-cone.jpg"  alt="An ice cream cone">
+      <img src="/images/desktop/image-gallery-sugarcubes.jpg"  alt="Stacks of sugar cubes">
+    </div>
+  </main>
+
+  <footer>
+
+    <img class="footer-logo" src="./images/logo.svg" alt="sunnyside logo">
+
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="">About</li></a>
+        <li><a href="">Services</li></a>
+        <li><a href="">Projects</li></a>
+      </ul>
+    </nav>
+
+    <div class="social-logos">
+      <a href=""><img alt="Facebook" src="./images/icon-facebook.svg"></a>
+      <a href=""><img alt="Instagram" src="./images/icon-instagram.svg"> </a>     
+      <a href=""><img alt="Twitter" src="./images/icon-twitter.svg"></a>
+      <a href=""><img alt="Pinterest" src="./images/icon-pinterest.svg"></a>
+    </div>
+
+  </footer>
+
+  <script>
+
+    const icon = document.querySelector(".hamburger-icon")
+    const menu = document.querySelector("#hamburger-menu")
+
+    icon.addEventListener("click", () => {
+      menu.classList.toggle("active")
+
+    })
+      document.body.addEventListener("click", (e) => {
+      if (event.target != menu   && event.target.parentNode != menu && event.target.parentNode != icon) {
+        menu.classList.remove("active")
+      }
+
+    })
+
+    // function toggle() {
+    //   const menu = document.getElementById("hamburger-menu")
+    //   menu.style.display === "block" ? menu.style.display = "none" : menu.style.display = "block" 
+      
+    // }
+
+  </script>
+
+</body>
+
+</html>
